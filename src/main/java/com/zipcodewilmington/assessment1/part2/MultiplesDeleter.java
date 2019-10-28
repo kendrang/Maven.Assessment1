@@ -12,17 +12,21 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-//        int counter = 0;
-//        Integer[] result = new Integer[ints.length-counter];
-//
-//        for (int i = 0; i < ints.length-1; i++) {
-//            if (ints[i] % 2 != 0) {
-//                result[i] = ints[i];
-//            } else counter++;
-//
-//
-//        }return result;
-        return null;
+        int counter = 0;
+        for (int i = 0 ; i < ints.length ; i++){
+            if(ints[i] %2 == 0){
+                counter +=1; }
+        }
+
+        Integer [] result = new Integer[ints.length-counter];
+        int r = 0;
+        for (int a = 0 ; a < ints.length ; a++){
+            if (ints[a] %2 != 0){
+                result[r] = ints[a];
+                r++;
+            }
+        }return result;
+
     }
 
     /**
@@ -31,7 +35,20 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
-        return null;
+        int counter = 0;
+        for (int i = 0 ; i < ints.length ; i++){
+            if(ints[i] %2 != 0){
+                counter +=1; }
+        }
+
+        Integer [] result = new Integer[ints.length-counter];
+        int r = 0;
+        for (int a = 0 ; a < ints.length ; a++){
+            if (ints[a] %2 == 0){
+                result[r] = ints[a];
+                r++;
+            }
+        }return result;
     }
 
     /**
@@ -40,7 +57,20 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+        int counter = 0;
+        for (int i = 0 ; i < ints.length ; i++){
+            if(ints[i] % 3 == 0){
+                counter +=1; }
+        }
+
+        Integer [] result = new Integer[ints.length-counter];
+        int r = 0;
+        for (int a = 0 ; a < ints.length ; a++){
+            if (ints[a] % 3 != 0){
+                result[r] = ints[a];
+                r++;
+            }
+        }return result;
     }
 
     /**
@@ -50,6 +80,19 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by `multiple` removed
      */
     public Integer[] deleteMultiplesOfN(Integer[] ints, int multiple) {
-        return null;
+        int counter = 0;
+        for (int i = 0 ; i < ints.length ; i++){
+            if(ints[i] % multiple == 0){
+                counter +=1; }
+        }
+
+        Integer [] result = new Integer[ints.length-counter];
+        int r = 0;
+        for (int a = 0 ; a < ints.length ; a++){
+            if (ints[a] % multiple != 0){
+                result[r] = ints[a];
+                r++;
+            }
+        }return result;
     }
 }
