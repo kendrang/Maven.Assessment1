@@ -10,10 +10,11 @@ public class PetOwner {
      */
     String name = "";
     Pet[] pets ;
+    Pet pet ;
 
     public PetOwner(String name, Pet... pets) {
     this.name = name;
-
+    this.pets = pets;
     }
 
     /**
