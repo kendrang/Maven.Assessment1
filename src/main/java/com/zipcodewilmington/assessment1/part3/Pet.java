@@ -60,7 +60,8 @@ public abstract class Pet implements Animal {
      * @param newPetOwner the new owner of this pet
      * ensure this instance of `Pet` is added to the owner's composite `pets` list
      */
-    public void setOwner(PetOwner newPetOwner) {
+    public void setOwner(PetOwner newPetOwner)
+    {
         this.newPetOwner=newPetOwner;
     }
 
