@@ -93,16 +93,16 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-//        Object [] result = new Object[objectArray.length+objectArrayToAdd.length];
-//        for (int i= 0; i <=objectArray.length-1; i++){
-//            result[i] = objectArray[i];
-//        }
-//        int newLength= result.length;
-//
-//        for (int j= 0; j <=objectArrayToAdd.length-1; j++){
-//            result[j] = objectArrayToAdd[j];
-//        }
-return null;
+        Integer [] result = new Integer[objectArray.length + objectArrayToAdd.length];
+        int newLength  =0;
+        for (int i= 0; i < objectArray.length; i++){
+            result[i] = (Integer)  objectArray[i];
+             newLength++;
+        }
+        for (int j= 0; j <objectArrayToAdd.length; j++){
+            result[newLength+j] = (Integer)  objectArrayToAdd[j];
+        }
+                return result;
 
     }
 }
