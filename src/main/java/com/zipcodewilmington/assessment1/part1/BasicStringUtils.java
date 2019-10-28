@@ -70,6 +70,6 @@ public class BasicStringUtils {
                 result += " ";
             }
         } return result;
-       
+
     }
 }
