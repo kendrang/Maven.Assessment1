@@ -38,11 +38,11 @@ public class ArrayUtils {
                 counter +=1; }
         }
 
-        Object[] result = new Object[objectArray.length-counter];
+        Integer [] result = new Integer[objectArray.length-counter];
         int r = 0;
         for (int a = 0 ; a < objectArray.length ; a++){
             if (objectArray[a] != objectToRemove){
-                result[r] = objectArray[a];
+                result[r] = (Integer) objectArray[a];
                 r++;
             }
         }
