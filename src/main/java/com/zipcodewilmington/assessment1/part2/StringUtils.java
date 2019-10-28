@@ -11,7 +11,8 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+
+        return sentence.split(" ");
     }
 
 
@@ -21,7 +22,11 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+        String[] words = sentence.split(" ");
+
+        String result = words[0];
+
+        return result;
     }
 
     /**
@@ -30,7 +35,13 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        return null;
+        String result = "";
+       String firstWord= getFirstWord(sentence);
+        for (int i =firstWord.length()-1; i>=0;i--){
+            result = result + firstWord.charAt(i);
+        }
+
+        return result;
     }
 
     /**
