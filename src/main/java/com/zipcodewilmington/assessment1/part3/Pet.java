@@ -4,9 +4,9 @@ package com.zipcodewilmington.assessment1.part3;
  * Created by leon on 2/16/18.
  */
 public abstract class Pet implements Animal {
-    private String name;
-    private  Integer age;
-    private PetOwner newPetOwner;
+    public String name;
+    public  Integer age;
+    public PetOwner newPetOwner;
     /**
      * nullary constructor
      * by default, pet has age of 0; name of "";
@@ -61,6 +61,7 @@ public abstract class Pet implements Animal {
      * ensure this instance of `Pet` is added to the owner's composite `pets` list
      */
     public void setOwner(PetOwner newPetOwner) {
+        this.newPetOwner=newPetOwner;
     }
 
     /**
