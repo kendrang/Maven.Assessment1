@@ -6,7 +6,7 @@ package com.zipcodewilmington.assessment1.part3;
 public abstract class Pet implements Animal {
     public String name;
     public  Integer age;
-    public PetOwner newPetOwner;
+    public PetOwner petOwner1;
     /**
      * nullary constructor
      * by default, pet has age of 0; name of "";
@@ -62,13 +62,14 @@ public abstract class Pet implements Animal {
      */
     public void setOwner(PetOwner newPetOwner)
     {
-        this.newPetOwner=newPetOwner;
+        this.petOwner1 = newPetOwner;
     }
 
     /**
      * @return PetOwner object whose composite `pets` collection contains this Pet instance
      */
     public PetOwner getOwner() {
-        return newPetOwner;
+
+        return petOwner1;
     }
 }

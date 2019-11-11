@@ -9,7 +9,7 @@ public class PetOwner {
      * @param pets array of Pet object
      */
     String name = "";
-    Pet[] pets ;
+    Pet[] pets;
     Pet pet ;
 
     public PetOwner(String name, Pet... pets) {
@@ -28,7 +28,11 @@ public class PetOwner {
      * @param pet pet to be removed from the composite collection Pets
      */
     public void removePet(Pet pet) {
-
+    for (int i =0 ; i < pets.length ; i++){
+        if (pets[i] == pet){
+            pets[i] = null;
+            }
+        }
     }
 
     /**
@@ -36,24 +40,38 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-        return null;
+        for (int i =0 ; i < pets.length ; i++){
+            if (pets[i] == pet){
+                return true;
+            }
+        }return false;
     }
 
     /**
      * @return the age of the Pet object whose age field is the lowest amongst all Pets in this class
      */
     public Integer getYoungetPetAge() {
-        return null;
+        Integer youngest = pets[0].getAge();
+        for (Pet petAges : pets) {
+            if (petAges.getAge() < youngest) {
+                youngest = petAges.getAge();
+            }
+        }
+        return youngest;
     }
-
-
 
 
     /**
      * @return the age of the Pet object whose age field is the highest amongst all Pets in this class
      */
     public Integer getOldestPetAge() {
-        return null;
+        Integer oldest = pets[0].getAge();
+        for (Pet petAges : pets) {
+            if (petAges.getAge() > oldest) {
+                oldest = petAges.getAge();
+            }
+        }
+        return oldest;
     }
 
 
@@ -61,7 +79,11 @@ public class PetOwner {
      * @return the sum of ages of Pet objects stored in this class divided by the number of Pet object
      */
     public Float getAveragePetAge() {
-        return null;
+        Float averageAge = 0F;
+        for (Pet petAges : pets ) {
+           averageAge +=  petAges.getAge() ;
+
+        } return averageAge / pets.length;
     }
 
     /**
